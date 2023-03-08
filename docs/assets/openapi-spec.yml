@@ -1,21 +1,13 @@
 openapi: 3.0.0
 servers:
-  - description: Agent Backchannel
-    url: http://localhost:{port}
-    variables:
-      port:
-        description: >
-          The port to use for the backchannel
-            * Acme:    9020
-            * Bob:      9030
-            * Faber:    9040
-            * Mallory:  9050
-        enum:
-          - "9020"
-          - "9030"
-          - "9040"
-          - "9050"
-        default: "9020"
+  - description: Acapy Backchannel
+    url: https://acapy.backchannel.idlab.app
+  - description: AFGO Backchannel
+    url: https://afgo.backchannel.idlab.app
+  # - description: AFJ Backchannel
+  #   url: https://afj.backchannel.idlab.app
+  # - description: DotNet Backchannel
+  #   url: https://dotnet.backchannel.idlab.app
 info:
   description: |
     This page documents the backchannel API the test harness uses to communicate with agents under tests.
