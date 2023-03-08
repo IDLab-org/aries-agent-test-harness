@@ -6,7 +6,6 @@ import {
   CredentialState,
   CredentialStateChangedEvent,
   JsonTransformer,
-  V1CredentialPreview,
   V2CredentialPreview,
 } from '@aries-framework/core'
 import { CredentialUtils } from '../utils/CredentialUtils'
@@ -17,6 +16,7 @@ import { ConnectionUtils } from '../utils/ConnectionUtils'
 
 const afjFormatToAathFormatMapping: Record<string, string> = {
   indy: 'indy',
+  anoncreds: 'indy',
 }
 
 @Controller('/agent/command/issue-credential-v2')

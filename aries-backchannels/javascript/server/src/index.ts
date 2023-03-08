@@ -1,10 +1,10 @@
 import { $log, Logger, registerProvider } from '@tsed/common'
 import minimist from 'minimist'
-import indy from 'indy-sdk'
 
 import { TestHarnessConfig } from './TestHarnessConfig'
 import { PlatformExpress } from '@tsed/platform-express'
 import { Server } from './Server'
+import * as indy from 'indy-sdk'
 
 async function startup() {
   const cliArguments = minimist(process.argv.slice(2), {
@@ -25,6 +25,8 @@ async function startup() {
 
   $log.level = 'debug'
 
+
+  // TODO: Set up native logger for anoncreds, askar and indy-vdr
   const $indyLogger = new Logger('Libindy')
 
   // @ts-ignore
