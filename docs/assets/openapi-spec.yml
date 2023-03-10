@@ -4,6 +4,8 @@ servers:
     url: https://acapy.backchannel.idlab.app
   - description: AFGO Backchannel
     url: https://afgo.backchannel.idlab.app
+  - description: Dev Mobile Backchannel
+    url: https://mobile-backchannel.staging.idlab.app
   # - description: AFJ Backchannel
   #   url: https://afj.backchannel.idlab.app
   # - description: DotNet Backchannel
