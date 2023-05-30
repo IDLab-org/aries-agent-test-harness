@@ -10,8 +10,8 @@ servers:
     url: https://mobile-dev.backchannel.idlab.app
   - description: Mobile Backchannel
     url: https://mobile.backchannel.idlab.app
-  # - description: AFJ Backchannel
-  #   url: https://afj.backchannel.idlab.app
+  - description: Github dev backchannel
+    url: https://lkamel-bug-free-space-fishstick-grg67w5wjqqcgxx-8020.preview.app.github.dev/
   # - description: DotNet Backchannel
   #   url: https://dotnet.backchannel.idlab.app
 info:
