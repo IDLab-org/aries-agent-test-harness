@@ -1,0 +1,11 @@
+prompt_toolkit~=2.0.9
+pygments
+web-py==0.62
+python3-indy
+#aries-cloudagent==0.5.2
+ptvsd
+aiohttp>=3.8.1
+aiohttp-cors==0.7.0
+ConfigArgParse
+typing_extensions
+base58

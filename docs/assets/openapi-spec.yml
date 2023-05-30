@@ -4,8 +4,8 @@ servers:
     url: https://acapy.backchannel.idlab.app
   - description: AFGO Backchannel
     url: https://afgo.backchannel.idlab.app
-  - description: Dev Mobile Backchannel IDLab 01
-    url: https://mobile-backchannel.staging.idlab.app
+  - description: Github Dev Mobile Backchannel
+    url: https://lkamel-bug-free-space-fishstick-grg67w5wjqqcgxx-8020.preview.app.github.dev/
   - description: Dev Mobile Backchannel IDLab 02
     url: https://mobile-dev.backchannel.idlab.app
   - description: Mobile Backchannel
