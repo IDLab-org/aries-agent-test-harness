@@ -4,7 +4,22 @@ Feature: RFC 0434 Intiating exchange using the Out of Band protocol
    As a sender or a receiver,
    I want to use Out of Band(RFC0434) protocols to accomplish this.
 
+   @OOBMobileTest
+   Scenario: Establish a connection between two agents
+      Given we have "2" agents
+         | name  | role    |
+         | Acme  | inviter |
+         | Bob   | invitee |
+      When "Bob" sends an explicit outofband invitation to "Acme"
+      And "Acme" receives the invitation
+      And "Acme" sends a connection request to "Bob"
+      And "Bob" receives the connection request
+      And "Bob" sends a connection response to "Acme"
+      And "Acme" receives the connection response
+      And "Acme" sends <message> to "Bob"
+      Then "Acme" and "Bob" have a connection
 
+      
    @T001-RFC0434 @RFC0036 @critical @AcceptanceTest
    Scenario: Issue a v1 indy credential using connectionless out of band invitation
       Given we have "2" agents
