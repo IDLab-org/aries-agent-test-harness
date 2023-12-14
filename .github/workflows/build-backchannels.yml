@@ -1,0 +1,31 @@
+name: build
+
+on:
+  push:
+    branches:
+      - "DTT-*"
+      - "main"
+
+env:
+  BASE_IMAGE_REPO: ${{ secrets.DOCKERHUB_USERNAME }}
+  TAG: latest
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Docker Login
+        run: |
+          docker login \
+            -u ${{ secrets.DOCKERHUB_USERNAME }} \
+            -p ${{ secrets.DOCKERHUB_TOKEN }}
+      - name: Docker Build
+        run: |
+          docker build -f acapy/Dockerfile.acapy-main ./aries-backchannels --tag ${{ BASE_IMAGE_REPO }}/aath-backchannel-acapy
+          docker build -f mobile/Dockerfile.mobile ./aries-backchannels --tag ${{ BASE_IMAGE_REPO }}/aath-backchannel-mobile
+      - name: Docker Push
+        run: |
+          docker push ${{ BASE_IMAGE_REPO }}/aath-backchannel-acapy
+          docker push ${{ BASE_IMAGE_REPO }}/aath-backchannel-mobile
