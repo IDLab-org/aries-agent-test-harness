@@ -26,7 +26,10 @@ jobs:
           cd aries-backchannels
           docker build -f acapy/Dockerfile.acapy-main . --tag ${{ env.BASE_IMAGE_REPO }}/aath-backchannel-acapy
           docker build -f mobile/Dockerfile.mobile . --tag ${{ env.BASE_IMAGE_REPO }}/aath-backchannel-mobile
+          cd ../aries-test-harness
+          docker build -f Dockerfile.harness . --tag ${{ env.BASE_IMAGE_REPO }}/aath-test-harness
       - name: Docker Push
         run: |
           docker push ${{ env.BASE_IMAGE_REPO }}/aath-backchannel-acapy
           docker push ${{ env.BASE_IMAGE_REPO }}/aath-backchannel-mobile
+          docker push ${{ env.BASE_IMAGE_REPO }}/aath-test-harness
